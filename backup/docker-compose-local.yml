@@ -13,6 +13,8 @@ services:
     
     networks:
       - dockernet
+    environment:
+      - DB_PORT=5432
 
 networks:
   dockernet:

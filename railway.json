@@ -1,23 +1,22 @@
 {
-    "services": [
-      {
-        "name": "odoo",
-        "type": "docker",
-        "disk": 1024,
-        "envVars": {
-          "PORT": "8069",
-          "DB_HOST": "@postgresql",
-          "DB_PORT": "5432",
-          "DB_USER": "tes",
-          "DB_PASSWORD": "password",
-          "ADMIN_PASSWORD": "odoo18"
-        }
-      },
-      {
-        "name": "postgresql",
-        "type": "postgres",
-        "disk": 2048
+  "services": [
+    {
+      "name": "odoo",
+      "type": "docker",
+      "disk": 1024,
+      "envVars": {
+        "PORT": "8069",
+        "DB_HOST": "${DATABASE_HOST}",
+        "DB_PORT": "${DATABASE_PORT}",
+        "DB_USER": "${DATABASE_USER}",
+        "DB_PASSWORD": "${DATABASE_PASSWORD}",
+        "ADMIN_PASSWORD": "odoo18"
       }
-    ]
-  }
-  
+    },
+    {
+      "name": "postgresql",
+      "type": "postgres",
+      "disk": 2048
+    }
+  ]
+}
