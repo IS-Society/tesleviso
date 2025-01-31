@@ -6,9 +6,9 @@
       "disk": 1024,
       "envVars": {
         "PORT": "8069",
-        "DB_HOST": "junction.proxy.rlwy.net",
-        "DB_PORT": "56735",
-        "DB_USER": "postgres",
+        "DB_HOST": "postgres.railway.internal",
+        "DB_PORT": "5432",
+        "DB_USER": "railway",
         "DB_PASSWORD": "hMRSOhWHuNcxVObYURNDAtGHsKBoBPbH",
         "ADMIN_PASSWORD": "odoo18"
       }
