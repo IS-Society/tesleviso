@@ -1,0 +1,69 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_addonbaru_book_tree" model="ir.ui.view">
+        <field name="name">addonbaru.book.tree</field>
+        <field name="model">addonbaru.book</field>
+        <field name="arch" type="xml">
+            <tree string="Books">
+                <field name="name" />
+                <field name="author" />
+                <field name="price" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_addonbaru_book_form" model="ir.ui.view">
+        <field name="name">addonbaru.book.form</field>
+        <field name="model">addonbaru.book</field>
+        <field name="arch" type="xml">
+            <form string="Books">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="author" />
+                        <field name="price" />
+                    </group>
+                    <!-- <notebook>
+                        <page string="Deskripsi">
+                            <field name="description" />
+                        </page>
+                        <page string="Catatan">
+                            <field name="notes" />
+                        </page>
+                        <page string="Log Pemeliharaan">
+                            <field name="maintenance_log_ids">
+                                <tree>
+                                    <field name="maintenance_date" />
+                                    <field name="maintenance_by" />
+                                    <field name="notes" />
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="maintenance_date" />
+                                        <field name="maintenance_by" />
+                                        <field name="notes" />
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="addonbaru_book_action" model="ir.actions.act_window">
+        <field name="name">Book Inventory</field>
+        <field name="res_model">addonbaru.book</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_addonbaru_book_tree" />
+    </record>
+
+    <!-- Menu dan Action -->
+    <menuitem id="addonbaru_management_menu" name="Book" sequence="1" />
+    <menuitem id="addonbaru_book_menu" name="Book Mdoule" 
+        action="addonbaru_book_action" />
+
+</odoo>
